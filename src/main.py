@@ -28,3 +28,6 @@ if __name__=='__main__':
     x, val, k = line_search_methods.grad_constant_step(f, get_gradient.calculate_analytical_gradient, x0, alpha, step)#固定步长法
     print('步长选择固定步长法得到的近似最优点：{}\n最优值：{}\n迭代次数：{}'.format(x, val.item(), k))
     get_gradient.draw_one_way_differential_gradient(f, x0)
+    """
+    显示step取10^(-7)时，误差最小
+    """

@@ -49,6 +49,11 @@ def draw_one_way_differential_gradient(f, x0):
         val /= np.linalg.norm(calculate_analytical_gradient(x, f, 10**(-i)))
         x_label.append(-i)
         y_label.append(math.log(val))
+    print(x_label)
+    print(y_label)
     plt.plot(x_label, y_label)
+    plt.xlabel('log(epison)')
+    plt.ylabel('log(relative error)')
+    plt.grid(True)
+    plt.gca().invert_xaxis()
     plt.show()
-
